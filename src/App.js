@@ -3,14 +3,19 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 // Redux
 import { connect } from 'react-redux';
+// Components
+import Login from './components/Login';
+import Register from './components/Register';
+// Styling
 import './App.css';
 
 const App = () => {
   return (
     <Router>
-      <div className="App">
-        <h1>WELCOME TO THE TATER AND TOTS POKEMON CHAMPIONSHIP!</h1>
-      </div>
+      <main className="App">
+        <Route exact path='/' component={Login} />
+        <Route path='/register' component={Register} />
+      </main>
     </Router>
   );
 };
