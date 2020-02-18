@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { register } from '../state/actions';
 import { Link } from 'react-router-dom';
 
-function Register(props) {
+const Register = (props) => {
   const intialState = {
     username: '',
     password: ''
@@ -18,7 +18,7 @@ function Register(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.register(payload);
-    props.history.push('/');
+    props.history.push('/teams');
 
     console.log(handleSubmit);
   };

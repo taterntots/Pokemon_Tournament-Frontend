@@ -12,3 +12,8 @@ export const LOGIN_FAIL = "LOGIN_FAIL";
 
 // Logout
 export const LOGOUT = "LOGOUT";
+
+// Get Teams
+export const GET_TEAMS_START = 'GET_TEAMS_START';
+export const GET_TEAMS_SUCCESS = 'GET_TEAMS_SUCCESS';
+export const GET_TEAMS_FAIL = 'GET_TEAMS_FAIL';

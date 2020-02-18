@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 // Components
 import Login from './components/Login';
 import Register from './components/Register';
+import TeamList from './components/TeamList';
 // Styling
 import './App.css';
 
@@ -15,6 +16,7 @@ const App = () => {
       <main className="App">
         <Route exact path='/' component={Login} />
         <Route path='/register' component={Register} />
+        <Route path='/teams' component={TeamList} />
       </main>
     </Router>
   );

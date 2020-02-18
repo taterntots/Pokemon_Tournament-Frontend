@@ -48,3 +48,18 @@ export const logout = (credentials) => dispatch => {
       // console.log(err);
   })
 }
+
+export const getTeams = (id) => dispatch => {
+  // console.log();
+  dispatch({ type: types.GET_TEAMS_START });
+  return axiosWithAuth()
+  .get(`/users/${id}/teams`)
+  .then(res => {
+      // console.log(res);
+      dispatch({ type: types.GET_TEAMS_SUCCESS, payload: res.data });
+  })
+  .catch(err => {
+      // console.log(err);
+      dispatch({ type: types.GET_TEAMS_FAIL, payload: err })
+  })
+}
