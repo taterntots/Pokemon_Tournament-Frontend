@@ -17,3 +17,8 @@ export const LOGOUT = "LOGOUT";
 export const GET_TEAMS_START = 'GET_TEAMS_START';
 export const GET_TEAMS_SUCCESS = 'GET_TEAMS_SUCCESS';
 export const GET_TEAMS_FAIL = 'GET_TEAMS_FAIL';
+
+// Get Pokemon
+export const GET_POKEMON_START = 'GET_POKEMON_START';
+export const GET_POKEMON_SUCCESS = 'GET_POKEMON_SUCCESS';
+export const GET_POKEMON_FAIL = 'GET_POKEMON_FAIL';

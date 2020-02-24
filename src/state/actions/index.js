@@ -63,3 +63,18 @@ export const getTeams = (id) => dispatch => {
       dispatch({ type: types.GET_TEAMS_FAIL, payload: err })
   })
 }
+
+export const getPokemon = () => dispatch => {
+  // console.log();
+  dispatch({ type: types.GET_POKEMON_START });
+  return axiosWithAuth()
+  .get(`/pokemon`)
+  .then(res => {
+      // console.log(res);
+      dispatch({ type: types.GET_POKEMON_SUCCESS, payload: res.data });
+  })
+  .catch(err => {
+      // console.log(err);
+      dispatch({ type: types.GET_POKEMON_FAIL, payload: err })
+  })
+}

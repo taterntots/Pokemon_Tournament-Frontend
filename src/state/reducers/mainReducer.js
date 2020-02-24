@@ -69,6 +69,22 @@ const mainReducer = (state = initialState, action) => {
         ...state,
         error: action.payload
       }
+    case types.GET_POKEMON_START:
+      return {
+        ...state,
+        fetchingData: true
+      }
+    case types.GET_POKEMON_SUCCESS:
+      return {
+        ...state,
+        fetchingData: false,
+        data: action.payload
+      }
+    case types.GET_POKEMON_FAIL:
+      return {
+        ...state,
+        error: action.payload
+      }
 
     default:
       return state;

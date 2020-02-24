@@ -21,7 +21,7 @@ const Login = (props) => {
     event.preventDefault();
     props.login(credentials);
     setTimeout(() => {
-      props.history.push('/teams');
+      props.history.push('/pokemon');
     }, 800)
   }
 
