@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { CardStyle } from './Styles';
+import Button from '@material-ui/core/Button';
 
 const PokemonCard = (props) => {
   console.log(props.name);
@@ -10,6 +11,7 @@ const PokemonCard = (props) => {
         <h2>Dex# {props.dexNum}</h2>
         <h2>{props.name}</h2>
         <h2>{props.type1}</h2>
+        <Button variant='contained' color='primary'>Add to Team</Button>
       </CardStyle>
     </div>
   )
