@@ -20,6 +20,8 @@ function initializeReactGA() {
   ReactGA.pageview('/homepage');
 }
 
+initializeReactGA();
+
 const App = () => {
   return (
     <Router>
