@@ -3,6 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 // Redux
 import { connect } from 'react-redux';
+// Google Analytics
+import ReactGA from 'react-ga';
 // Components
 import Login from './components/Login';
 import NavBar from './components/NavBar';
@@ -12,6 +14,11 @@ import PokemonList from './components/PokemonList';
 import PrivateRoute from './components/PrivateRoute';
 // Styling
 import './App.css';
+
+function initializeReactGA() {
+  ReactGA.initialize('UA-159232862-1');
+  ReactGA.pageview('/homepage');
+}
 
 const App = () => {
   return (
