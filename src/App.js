@@ -18,7 +18,8 @@ import './App.css';
 
 function initializeReactGA() {
   ReactGA.initialize('UA-159232862-1');
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  ReactGA.set({ page: window.location.pathname }); // Update the user's current page
+  ReactGA.pageview(window.location.pathname + window.location.search); // Record a pageview for the given page
 }
 
 // const history = createBrowserHistory();
